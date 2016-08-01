@@ -26,27 +26,33 @@ function loadMapScenario() {
         showMapTypeSelector: false,
     });
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-        map_manager.map.setView({zoom: 17});
+        map_manager.map.setView({
+            // Use time square as starting point.
+            center: new Microsoft.Maps.Location(40.7553085,-73.9844294),
+            zoom: 17
+        });
     }
     else {
-        map_manager.map.setView({zoom: 15});
+        map_manager.map.setView({
+            // Use time square as starting point.
+            center: new Microsoft.Maps.Location(40.7553085,-73.9844294),
+            zoom: 15
+        });
     }
 
-    // Change initial view if possible
-    if (navigator.geolocation) {
-      function set_initial_view(position) {
-        map_manager.map.setView({
-            center: new Microsoft.Maps.Location(position.coords.latitude, position.coords.longitude),
-        });
-      }
-      navigator.geolocation.getCurrentPosition(set_initial_view);
+    function set_user_current_location() {
+        // Change initial view if possible
+        if (navigator.geolocation) {
+          function set_initial_view(position) {
+            map_manager.map.setView({
+                center: new Microsoft.Maps.Location(position.coords.latitude, position.coords.longitude),
+            });
+          }
+          navigator.geolocation.getCurrentPosition(set_initial_view);
+        }
     }
-    else {
-        // Use time square if not able to use user's location
-        map_manager.map.setView({
-            center: new Microsoft.Maps.Location(40.7538781,-73.9879914),
-        });
-    }
+    setTimeout(set_user_current_location, 2000);
+
 }
 
 
