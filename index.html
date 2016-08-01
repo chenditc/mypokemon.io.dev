@@ -46,7 +46,7 @@
   </head>
   <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-      <header class="demo-header mdl-layout__header mdl-color--red-800 mdl-color-text--white">
+      <header class="demo-header mdl-layout__header mdl-color--red-700 mdl-color-text--white">
         <div class="mdl-layout__header-row">
           <span id="home_title" class="mdl-layout-title">Pokemon Map</span>
           <div class="mdl-layout-spacer"></div>
@@ -70,9 +70,23 @@
       <div class="demo-drawer mdl-layout__drawer mdl-color--white mdl-color-text--white">
         <nav class="demo-navigation mdl-navigation mdl-color--red-900">
           <a class="mdl-navigation__link" href="javascript:query_pokemon()"><i class="mdl-color-text--white material-icons" role="presentation">home</i>Pokemon</a>
-          <a class="mdl-navigation__link" href="javascript:query_pokestop()"><i class="mdl-color-text--white material-icons" role="presentation">inbox</i>Pokestop</a>
-          <a class="mdl-navigation__link" href="javascript:query_gym()"><i class="mdl-color-text--white material-icons" role="presentation">delete</i>Gym</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--white material-icons" role="presentation">report</i>FAQ</a>
+          <a class="mdl-navigation__link" href="javascript:query_pokestop()"><i class="mdl-color-text--white material-icons" role="presentation">gps_fixed</i>Pokestop</a>
+          <a class="mdl-navigation__link" href="javascript:query_gym()"><i class="mdl-color-text--white material-icons" role="presentation">flash_on</i>Gym</a>
+          <a class="mdl-navigation__link" href="javascript:toggle_faq_list()"><i class="mdl-color-text--white material-icons" role="presentation">question_answer</i>FAQ</a>
+          <ul class="notshow" id="faq_list">
+            <li>
+              <p><strong>What is pokemon map?</strong></p>
+              <p>This map shows you where are the pokemons and when they are going to disappear.</p>
+            </li>
+            <li>
+              <p><strong>Are the Pokemon displayed actually there?</strong></p>
+              <p>Yes</p>
+            </li>
+            <li>
+              <p><strong>Why some place does not have pokemon?</strong></p>
+              <p>Data might take few minutes to be fully loaded, let's be patient.</p>
+            </li>
+          </ul>
           <div class="mdl-layout-spacer"></div>
           <a class="mdl-navigation__link" href="mailto:info@mypokemon.io"><i class="mdl-color-text--white material-icons" role="presentation">help_outline</i><span>info@mypokemon.io</span></a>
         </nav>

@@ -190,6 +190,16 @@ function query_gym() {
     update_map();
 }
 
+var faq_list = document.getElementById('faq_list');
+function toggle_faq_list() {
+    if (faq_list.className == "notshow") {
+        faq_list.className = "show"
+    }
+    else {
+        faq_list.className = "notshow"
+    }
+}
+
 // Refresh expire time every second
 window.setInterval(reload_map_items, 1000)
 
