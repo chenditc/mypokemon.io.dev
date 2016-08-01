@@ -133,8 +133,7 @@ html, body {
   color: #EF3C79;
 }
 .demo-graphs {
-  height: 80vh;
-  padding: 16px 32px;
+  height: 85vh;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
