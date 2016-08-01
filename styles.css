@@ -97,12 +97,12 @@ html, body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  color: rgba(255, 255, 255, 0.56);
+  color: rgba(255, 255, 255, 1);
   font-weight: 500;
 }
 .demo-layout .demo-navigation .mdl-navigation__link:hover {
-  background-color: #00BCD4;
-  color: #37474F;
+  background-color: #ff9800;
+  color: rgba(66, 66, 66, 1);
 }
 .demo-navigation .mdl-navigation__link .material-icons {
   font-size: 24px;
