@@ -182,13 +182,18 @@ function update_map() {
     }
 }
 
+function close_drawer_if_open() {
+    if (document.querySelector('.mdl-layout__obfuscator').classList.contains('is-visible')) {
+        var layout = document.querySelector('.mdl-layout');
+        layout.MaterialLayout.toggleDrawer();
+    }
+}
+
 function query_type_changed() {
-    map_manager.map_items =[]
+    map_manager.map_items =[];
     reload_map_items();
     update_map();
-    // close drawer
-    var layout = document.querySelector('.mdl-layout');
-    layout.MaterialLayout.toggleDrawer();
+    close_drawer_if_open();
 }
 
 
@@ -222,8 +227,7 @@ function toggle_faq_list() {
             faq_card.style.display = ""
         }
     }
-    var layout = document.querySelector('.mdl-layout');
-    layout.MaterialLayout.toggleDrawer();
+    close_drawer_if_open();
 }
 
 
