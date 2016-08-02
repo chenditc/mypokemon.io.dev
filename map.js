@@ -53,6 +53,8 @@ function loadMapScenario() {
     }
     setTimeout(set_user_current_location, 2000);
 
+    // Every time user view changed, update the map
+    Microsoft.Maps.Events.addHandler(map_manager.map, 'viewchangeend', update_map);
 }
 
 
@@ -152,6 +154,7 @@ function update_map() {
             .then(function(result){
                 update_mark = false
                 map_manager.map_items = result.data;
+                reload_map_items();
             }).catch( function(result){
                 update_mark = false
             });
@@ -161,6 +164,7 @@ function update_map() {
             .then(function(result){
                 update_mark = false
                 map_manager.map_items = result.data;
+                reload_map_items();
             }).catch( function(result){
                 update_mark = false
             });
@@ -170,6 +174,7 @@ function update_map() {
             .then(function(result){
                 update_mark = false
                 map_manager.map_items = result.data;
+                reload_map_items();
             }).catch( function(result){
                 update_mark = false
             });
@@ -206,8 +211,12 @@ function toggle_faq_list() {
     }
 }
 
+
+
 // Refresh expire time every second
 window.setInterval(reload_map_items, 1000)
 
-// Query new pokemon every 2 seconds
-window.setInterval(update_map, 2000)
+// Query new pokemon every 10 seconds
+window.setInterval(update_map, 10000)
+
+
