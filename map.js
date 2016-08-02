@@ -13,6 +13,18 @@ function refresh_now_time() {
 }
 refresh_now_time();
 
+function set_user_current_location() {
+    // Change initial view if possible
+    if (navigator.geolocation) {
+      function set_initial_view(position) {
+        map_manager.map.setView({
+            center: new Microsoft.Maps.Location(position.coords.latitude, position.coords.longitude),
+        });
+      }
+      navigator.geolocation.getCurrentPosition(set_initial_view);
+    }
+}
+
 // Initializa map DOM
 function loadMapScenario() {
     // init map
@@ -40,17 +52,6 @@ function loadMapScenario() {
         });
     }
 
-    function set_user_current_location() {
-        // Change initial view if possible
-        if (navigator.geolocation) {
-          function set_initial_view(position) {
-            map_manager.map.setView({
-                center: new Microsoft.Maps.Location(position.coords.latitude, position.coords.longitude),
-            });
-          }
-          navigator.geolocation.getCurrentPosition(set_initial_view);
-        }
-    }
     set_user_current_location();
 
     // Every time user view changed, update the map
