@@ -51,7 +51,7 @@ function loadMapScenario() {
           navigator.geolocation.getCurrentPosition(set_initial_view);
         }
     }
-    setTimeout(set_user_current_location, 2000);
+    set_user_current_location();
 
     // Every time user view changed, update the map
     Microsoft.Maps.Events.addHandler(map_manager.map, 'viewchangeend', update_map);
