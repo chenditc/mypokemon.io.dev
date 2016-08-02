@@ -75,26 +75,73 @@
           <a class="mdl-navigation__link" href="javascript:query_pokestop()"><i class="mdl-color-text--white material-icons" role="presentation">gps_fixed</i>Pokestop</a>
           <a class="mdl-navigation__link" href="javascript:query_gym()"><i class="mdl-color-text--white material-icons" role="presentation">flash_on</i>Gym</a>
           <a class="mdl-navigation__link" href="javascript:toggle_faq_list()"><i class="mdl-color-text--white material-icons" role="presentation">question_answer</i>FAQ</a>
-          <ul class="notshow" id="faq_list">
-            <li>
-              <p><strong>What is pokemon map?</strong></p>
-              <p>This map shows you where are the pokemons and when they are going to disappear.</p>
-            </li>
-            <li>
-              <p><strong>Are the Pokemon displayed actually there?</strong></p>
-              <p>Yes</p>
-            </li>
-            <li>
-              <p><strong>Why some place does not have pokemon?</strong></p>
-              <p>Data might take few minutes to be fully loaded.</p>
-            </li>
-          </ul>
           <div class="mdl-layout-spacer"></div>
           <a class="mdl-navigation__link" href="mailto:info@mypokemon.io"><i class="mdl-color-text--white material-icons" role="presentation">help_outline</i><span>info@mypokemon.io</span></a>
         </nav>
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
+
+          <!-- FAQ cards -->
+          <div id="faq1" class="faq-card demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+            <div class="mdl-card__title mdl-color--teal-300">
+              <h2 class="mdl-card__title-text">What is pokemon map?</h2>
+            </div>
+            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+              <p>Pokemon map shows you where are the pokemons and the estimated time they are going to disappear.</p>
+              <p>Find all Pokemon near you (or a selected target location) in real time for Pokemon Go. Pokemon nearby will be marked along with their appearance timer on the map. These are real time Pokemon locations, meaning they are currently live and can be found exactly at the marked spots.</p>
+            </div>
+          </div>
+
+          <div id="faq2" class="faq-card demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+            <div class="mdl-card__title mdl-color--teal-300">
+              <h2 class="mdl-card__title-text">Why there is no pokemon in my area?</h2>
+            </div>
+            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+              <p>Since we are waiting for our agents to update pokemon location, it might take a while for them to check different location and update the map.</p>
+            </div>
+          </div>
+
+          <div id="faq3" class="faq-card demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+            <div class="mdl-card__title mdl-color--teal-300">
+              <h2 class="mdl-card__title-text">Why do I see some Pokemon in game but not on your map?</h2>
+            </div>
+            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+              <p>Sorry, our map is not perfect at this time, some pokemons might missing from the tap</p>
+              <p>Zoom in the map and wait for one more minute to see if it helps.</p>
+            </div>
+          </div>
+
+          <div id="faq4" class="faq-card demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+            <div class="mdl-card__title mdl-color--teal-300">
+              <h2 class="mdl-card__title-text">Where can I use this map?</h2>
+            </div>
+            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+              <p>Currently, this map works best in big city, since we have most our agents in big city.</p>
+            </div>
+          </div>
+
+          <div id="faq5" class="faq-card demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+            <div class="mdl-card__title mdl-color--teal-300">
+              <h2 class="mdl-card__title-text">Where can I use this map?</h2>
+            </div>
+            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+              <p>Currently, this map works best in big city, since we have most our agent in big city. Small town might also work, give it a try.</p>
+            </div>
+          </div>
+
+          <div id="faq6" class="faq-card demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+            <div class="mdl-card__title mdl-color--teal-300">
+              <h2 class="mdl-card__title-text">How can I volunteer to be one of the agent?</h2>
+            </div>
+            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+              <p>You may reach us via <a href="mailto:info@mypokemon.io">info@mypokemon.io</a></p>
+            </div>
+          </div>
+
+          <!-- end of FAQ cards -->
+
+          <!-- maps -->
           <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col">
             <!-- Add Map -->
             <div id="pokemonmap" viewBox="0 0 500 250" class="demo-graph">
@@ -103,6 +150,7 @@
           <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
             <div class="demo-separator mdl-cell--1-col"></div>
           </div>
+          <p class="mdl-color-text--black">© mypokemon.io 2016. All rights reserved.</p>
         </div>
       </main>
     </div>

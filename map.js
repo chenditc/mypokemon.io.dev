@@ -182,34 +182,48 @@ function update_map() {
     }
 }
 
+function query_type_changed() {
+    map_manager.map_items =[]
+    reload_map_items();
+    update_map();
+    // close drawer
+    var layout = document.querySelector('.mdl-layout');
+    layout.MaterialLayout.toggleDrawer();
+}
+
 
 function query_pokemon() {
     query_type = "pokemon";
     document.getElementById('home_title').innerHTML="Pokemon Map"
     console.log("Switch to query pokemon");
-    update_map();
+    query_type_changed();
 }
 function query_pokestop() {
     query_type= "pokestop"
     document.getElementById('home_title').innerHTML="Pokestop Map"
     console.log("Switch to query pokestop");
-    update_map();
+    query_type_changed();
 }
 function query_gym() {
     query_type= "gym"
     document.getElementById('home_title').innerHTML="Pokemon Gym Map"
     console.log("Switch to query gym");
-    update_map();
+    query_type_changed();
 }
 
-var faq_list = document.getElementById('faq_list');
+
 function toggle_faq_list() {
-    if (faq_list.className == "notshow") {
-        faq_list.className = "show"
+    for( var i = 1; i <= 6; i++) {
+        var faq_card = document.getElementById('faq' + i);
+        if (faq_card.style.display == "") {
+            faq_card.style.display = "inline"
+        }
+        else {
+            faq_card.style.display = ""
+        }
     }
-    else {
-        faq_list.className = "notshow"
-    }
+    var layout = document.querySelector('.mdl-layout');
+    layout.MaterialLayout.toggleDrawer();
 }
 
 
