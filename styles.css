@@ -133,7 +133,7 @@ html, body {
   color: #EF3C79;
 }
 .demo-graphs {
-  height: 85vh;
+  height: 75vh;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
