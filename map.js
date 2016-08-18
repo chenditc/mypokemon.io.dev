@@ -125,6 +125,17 @@ function reload_map_items() {
     // Update map with latest pins
     map_manager.map.layers.clear();
     map_manager.map.layers.insert(layer);
+
+    // Show progress bar to make user more patient
+    progress_bar = document.getElementById('map_progressbar');
+    // TOOD: Use density as indicator
+    if (item_list.length > 20) {
+        progress_bar.style.visibility = "hidden";
+    }
+    else {
+        progress_bar.style.visibility = "";
+    }
+
 }
 
 // Update new map items
