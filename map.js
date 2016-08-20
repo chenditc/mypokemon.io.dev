@@ -142,7 +142,7 @@ function reload_map_items() {
 function update_map() {
     refresh_now_time()
     // Can not trigger this more than one time
-    if ((now_time - last_update < 1) || (update_mark === true)) {
+    if (update_mark === true) {
         return;
     }
     last_update = now_time
